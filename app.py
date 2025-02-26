@@ -14,7 +14,7 @@
 # print(full_name("Barron", "Trump"))
 
 # def implement_signup():
-#    ... 
+#    ...
 # def divide(num1, num2=1):
 #     return num1 / num2
 #
@@ -44,18 +44,42 @@
 #     return students
 #
 # print(get_num_of_students())
-def outer():
-    message = 'local'
-
-    def inner():
-        nonlocal message
-
-        message = "nonlocal"
-        print("inner:", message)
-
-    inner()
-
-    print("outer:", message)
-
-outer()
-
+# def outer():
+#     message = 'local'
+#
+#     def inner():
+#         nonlocal message
+#
+#         message = "nonlocal"
+#         print("inner:", message)
+#
+#     inner()
+#
+#     print("outer:", message)
+#
+# outer()
+# def factorial(x):
+#     if x == 1:
+#         return 1
+#     else:
+#         return (x * factorial(x - 1))
+#
+# print(factorial(5))
+# from example import subtract
+#
+# print(subtract(6,7))
+# import math
+#
+# print(math.gcd(12,18))
+# from example import subtract as difference
+#
+# print(difference(10,5))
+# import example
+#
+# # print(dir(example))
+# print(example.__name__)
+# from game.image import app
+#
+# app.image()
+# print(__name__)
+import helloworld

@@ -1,0 +1,2 @@
+def image():
+    print("image")
