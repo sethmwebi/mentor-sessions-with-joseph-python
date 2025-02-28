@@ -95,32 +95,90 @@
 # print(bat.name)
 # bat.mammal_info()
 # bat.winged_animals_info()
-class Cat:
+# class Cat:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+#
+#     def make_sound(self):
+#         print("Meow")
+#
+# class Dog:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
+#
+#     def make_sound(self):
+#         print("Bark")
+#
+# cat = Cat("Kitty", 2.5)
+# dog = Dog("Fluffy", 4)
+#
+# for animal in (cat, dog):
+#     animal.make_sound()
+#     animal.info()
+#     animal.make_sound()
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+#         
+#     def __str__(self):
+#         return f'The student\'s name is {self.name}'
+#
+# stud = Student("Ivy")
+# print(stud)
+# class Point:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y 
+#
+#     def add_points(self, other):
+#         x = self.x + other.x
+#         y = self.y + other.y
+#         return Point(x,y)
+#
+# p1 = Point(2,3)
+# p2 = Point(4,5)
+#
+# p3 = p1.add_points(p2)
+# print(p3.x, p3.y)
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y 
+#
+#     def __add__(self, other):
+#         x = self.x + other.x
+#         y = self.y + other.y
+#         return Point(x,y)
+#
+# p1 = Point(2,3)
+# p2 = Point(4,5)
+#
+# p3 = p1 + p2
+# print(p3.x, p3.y)
+# comparison operator overloading
+class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
-    def info(self):
-        print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+    def __lt__(self, other):
+        return self.age < other.age
 
-    def make_sound(self):
-        print("Meow")
+    def __eq__(self, other):
+        return self.age == other.age
 
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+p1 = Person("Kevin", 20)
+p2 = Person("Ivy", 19)
+p3 = Person("Charity", 19)
 
-    def info(self):
-        print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
-
-    def make_sound(self):
-        print("Bark")
-
-cat = Cat("Kitty", 2.5)
-dog = Dog("Fluffy", 4)
-
-for animal in (cat, dog):
-    animal.make_sound()
-    animal.info()
-    animal.make_sound()
+print(p1 < p2)
+print(p2 == p3)
